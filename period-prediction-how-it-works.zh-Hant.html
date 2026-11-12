@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>經期預測怎麼算？下次月經、排卵日與易孕期的推估原理</title>
+<meta name="description" content="經期預測是怎麼算出來的？整理經期 App 預測下次月經、排卵日與易孕期的基本算法、為什麼每個月的預測會變、預測不準時怎麼調整記錄，以及資料只留在手機裡的私密做法。">
+<link rel="canonical" href="https://open.cait518.cc/cyca-support/period-prediction-how-it-works.zh-Hant.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://open.cait518.cc/cyca-support/period-prediction-how-it-works.zh-Hant.html">
+<meta property="og:title" content="經期預測怎麼算？下次月經、排卵日與易孕期的推估原理">
+<meta property="og:description" content="經期預測是怎麼算出來的？整理經期 App 預測下次月經、排卵日與易孕期的基本算法、為什麼每個月的預測會變、預測不準時怎麼調整記錄，以及資料只留在手機裡的私密做法。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://open.cait518.cc/cyca-support/period-prediction-how-it-works.zh-Hant.html">
+<meta name="apple-itunes-app" content="app-id=6782251621">
+<style>
+:root{color-scheme:light dark;--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f6368;--line:rgba(128,128,128,.22);--accent:#2f6fde;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececf0;--muted:#a3a3ab;--card:#1d1d21;--accent:#7aa7ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","PingFang TC","Noto Sans CJK TC","Apple SD Gothic Neo",Roboto,sans-serif}
+a{color:var(--accent)}
+.helpdoc{max-width:820px;margin:0 auto;padding:28px 16px 64px}
+.helpdoc h1{font-size:clamp(26px,4.4vw,36px);line-height:1.3;margin:.2em 0 .4em}
+.helpdoc h2{font-size:clamp(19px,2.8vw,24px);margin:2.1em 0 .6em;scroll-margin-top:16px}
+.helpdoc h3{font-size:17px;margin:1.5em 0 .35em}
+.helpdoc .lede{font-size:17.5px;color:var(--muted);margin:0 0 1.4em}
+.helpdoc .hd-nav{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:0 0 20px}
+.helpdoc .hd-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;padding:0;list-style:none}
+.helpdoc .hd-toc a{display:inline-block;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;text-decoration:none}
+.helpdoc .tbl{overflow-x:auto;margin:.8em 0}
+.helpdoc table{width:100%;border-collapse:collapse;font-size:15px}
+.helpdoc th,.helpdoc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.helpdoc th{font-weight:650;white-space:nowrap}
+.helpdoc .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:1em 0}
+.helpdoc .cta{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:2.4em 0 1em}
+.helpdoc .cta a.btn{display:inline-block;margin:6px 0;padding:11px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:650;text-decoration:none}
+.helpdoc .hd-q{margin:1.4em 0 .3em;font-weight:650;font-size:16.5px}
+.helpdoc .hd-a{margin:0 0 .2em}
+.helpdoc .hd-note{font-size:13px;color:var(--muted);margin-top:2.6em;border-top:1px solid var(--line);padding-top:14px}
+.helpdoc ul,.helpdoc ol{padding-left:1.25em}
+.helpdoc li{margin:.3em 0}
+@media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "經期預測怎麼算？下次月經、排卵日與易孕期的推估原理", "description": "經期預測是怎麼算出來的？整理經期 App 預測下次月經、排卵日與易孕期的基本算法、為什麼每個月的預測會變、預測不準時怎麼調整記錄，以及資料只留在手機裡的私密做法。", "inLanguage": "zh-Hant", "mainEntityOfPage": "https://open.cait518.cc/cyca-support/period-prediction-how-it-works.zh-Hant.html", "dateModified": "2026-11-12", "author": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "publisher": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "about": {"@type": "SoftwareApplication", "name": "Cyca 經期週期追蹤・排卵", "operatingSystem": "iOS", "applicationCategory": "HealthApplication", "url": "https://apps.apple.com/app/id6782251621"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hant", "mainEntity": [{"@type": "Question", "name": "經期預測準嗎？", "acceptedAnswer": {"@type": "Answer", "text": "預測是依你過去的週期推估，記錄越多通常越貼近自己的節奏，但仍只是估算，不是檢驗結果。"}}, {"@type": "Question", "name": "為什麼這個月的經期預測和上個月不一樣？", "acceptedAnswer": {"@type": "Answer", "text": "因為每次記錄後都會重新計算。週期本來就可能每個月差幾天，預測跟著調整是正常的。"}}, {"@type": "Question", "name": "經期預測可以拿來避孕嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不可以。依週期推估的經期、排卵日與易孕期都只是估算；Cyca 提供的是健康與規劃的估算，並非醫療器材，也不可作為避孕方法。"}}, {"@type": "Question", "name": "用 Cyca 做經期預測需要註冊帳號嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。Cyca 沒有伺服器、不需帳號，資料只存在你的 iPhone，離線也能用。"}}]}</script>
+<!-- ls-pwa:start -->
+<link rel="manifest" href="/cyca-support/manifest.webmanifest">
+<!-- ls-pwa:end -->
+<!-- ls-sharecard:start -->
+<meta property="og:site_name" content="Cyca: Period &amp; Cycle Tracker">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://open.cait518.cc/cyca-support/assets/og.png?v=ad2f52fbab">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cyca: Period &amp; Cycle Tracker — Private, Offline, No Account">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="max-image-preview:large">
+<!-- ls-sharecard:end -->
+</head>
+<body>
+<p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">本站由這些 App 的開發者 Lumi Studio 營運，介紹的是我們自己的 App。</p>
+<main class="helpdoc">
+<nav class="hd-nav"><a href="./">支援首頁</a><a href="help.zh-Hant.html">說明與常見問題</a><a href="https://apps.apple.com/tw/app/id6782251621?pt=118326163&amp;ct=sqa1112_cyca_tw_w1&amp;mt=8">Cyca 經期週期追蹤・排卵</a><a href="https://play.google.com/store/apps/details?id=com.alice51849.cyca&amp;referrer=utm_source%3Dsqa1112_cyca_tw_w1%26utm_campaign%3Dcyca" rel="noopener" data-ls-play="nav">Google Play</a></nav>
+<h1>經期預測怎麼算？下次月經、排卵日與易孕期的推估原理</h1>
+<p class="lede">經期 App 上那個「下次月經還有 X 天」，其實是用你過去的記錄算出來的估算。知道它大概怎麼算，就比較懂為什麼預測會變、什麼時候該多記一點。本頁只是一般資訊，不能用來自我診斷。</p>
+<h2 id="how">經期預測的基本算法</h2>
+<div class="tbl"><table><thead><tr><th>預測項目</th><th>一般推估方式</th></tr></thead><tbody>
+<tr><td>下次經期</td><td>上次月經第一天，加上你近幾次的平均週期長度</td></tr>
+<tr><td>排卵日</td><td>常見做法是從下次經期往前推約 14 天（黃體期通常較固定）</td></tr>
+<tr><td>易孕期</td><td>排卵日前幾天到排卵日後一天左右的區間</td></tr>
+</tbody></table></div>
+<p>這是常見的推估邏輯，實際每個人的黃體期與週期都有差異，所以算出來的永遠是「大概」。想了解排卵日的算式範例，可以看<a href="ovulation-calculator-explained.zh-Hant.html">排卵日怎麼算</a>。</p>
+<h2 id="change">為什麼經期預測每個月會變</h2>
+<ul><li><strong>週期本來就會浮動</strong>：英國 NHS 指出，週期在 21 到 35 天之間都算正常，每個月相差幾天也很常見。</li><li><strong>每次記錄都會重新計算</strong>：新的一次月經記下去，平均週期就更新，預測也跟著調整。</li><li><strong>壓力、作息、生病</strong>：都可能讓這個月提早或延後，預測只能依過去推估，無法預知這些變化。</li></ul>
+<h2 id="better">想讓預測更貼近自己，可以這樣記</h2>
+<ol><li><strong>每次都記下月經第一天</strong>：這是預測最重要的資料。</li><li><strong>連續記幾個週期</strong>：只有一兩次的記錄，很難算出可靠的平均。</li><li><strong>漏記就補上</strong>：中間缺一次，平均週期會被拉長或拉短。</li><li><strong>順手記經血量、經痛、心情</strong>：久了更容易看出自己的節律。</li></ol>
+<div class="box"><strong>先說清楚：</strong>任何 App 算出的經期、排卵日與易孕期都只是估算。Cyca 提供的是健康與規劃的估算，<strong>並非醫療器材，也不可作為避孕方法</strong>。</div>
+<h2 id="cyca">用 Cyca 看經期預測，資料只留在手機</h2>
+<p>預測需要的是很私人的月經記錄。<strong>Cyca</strong> 不需帳號、沒有雲端，資料只存在你的 iPhone，離線也能用：</p>
+<ul><li><strong>個人化的預測</strong>：學習你的週期節律，預測下次經期、易孕期與排卵日，並在每次記錄後持續調整。</li><li><strong>一眼看懂的日曆</strong>：經期、易孕期與排卵日以柔和清楚的顏色標在日曆上。</li><li><strong>幾秒完成記錄</strong>：經血量、經痛、心情與筆記，幾秒就記好。</li><li><strong>貼心提醒</strong>：經期或 PMS 來臨前提醒你，提早準備。</li></ul>
+<p>說明：App 打開就能記錄今天與生理期；下次經期、易孕期與排卵日的未來預測、個人節律、智慧規劃與完整日曆紀錄，需要在 App 內一次解鎖（買斷，不是訂閱）。</p>
+<div class="cta">
+<p><strong>想要不用帳號的私密經期預測？</strong> Cyca 不需帳號、沒有雲端，資料只存在你的 iPhone；記下經期，就幫你預估下次經期、易孕期與排卵日，每次記錄後持續調整（預測僅供參考）。</p>
+<p><a class="btn" href="https://apps.apple.com/tw/app/id6782251621?pt=118326163&amp;ct=sqa1112_cyca_tw_w1&amp;mt=8">在 App Store 查看 Cyca 經期週期追蹤・排卵</a></p>
+<p><strong>使用 Android？</strong></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.cyca&amp;referrer=utm_source%3Dsqa1112_cyca_tw_w1%26utm_campaign%3Dcyca" rel="noopener" data-ls-play="cta">在 Google Play 查看 Cyca 經期週期追蹤・排卵</a></p>
+<p>已經在用 Cyca 經期週期追蹤・排卵？可以到 App Store 留下評分或評論。 <a href="https://apps.apple.com/app/id6782251621?action=write-review">撰寫評論</a></p>
+</div>
+<h2 id="faq">常見問題</h2>
+<p class="hd-q">經期預測準嗎？</p>
+<p class="hd-a">預測是依你過去的週期推估，記錄越多通常越貼近自己的節奏，但仍只是估算，不是檢驗結果。</p>
+<p class="hd-q">為什麼這個月的經期預測和上個月不一樣？</p>
+<p class="hd-a">因為每次記錄後都會重新計算。週期本來就可能每個月差幾天，預測跟著調整是正常的。</p>
+<p class="hd-q">經期預測可以拿來避孕嗎？</p>
+<p class="hd-a">不可以。依週期推估的經期、排卵日與易孕期都只是估算；Cyca 提供的是健康與規劃的估算，並非醫療器材，也不可作為避孕方法。</p>
+<p class="hd-q">用 Cyca 做經期預測需要註冊帳號嗎？</p>
+<p class="hd-a">不需要。Cyca 沒有伺服器、不需帳號，資料只存在你的 iPhone，離線也能用。</p>
+<div class="box"><strong>健康聲明：</strong>本頁為一般資訊，不構成醫療診斷或治療建議；身體有任何疑慮，請就醫並諮詢婦產科或家醫科醫師。Cyca 的預測僅供參考，Cyca 提供的是健康與規劃的估算，並非醫療器材，也不可作為避孕方法。</div>
+<h2 id="related">相關教學</h2>
+<ul><li><a href="period-tracking-private-no-account.zh-Hant.html">經期追蹤怎麼開始？不用帳號的私密記法</a></li><li><a href="ovulation-calculator-explained.zh-Hant.html">排卵日怎麼算？排卵日計算器的原理一次看懂</a></li><li><a href="late-period-reasons.zh-Hant.html">月經延遲的常見原因：何時驗孕、何時就醫</a></li></ul>
+<p class="hd-note">本頁由 Cyca 經期週期追蹤・排卵 開發者在 AI 協助下撰寫，並對照 App Store 商店頁內容核對。最後更新：2026-11-12。</p>
+</main>
+</body>
+</html>
