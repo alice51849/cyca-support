@@ -12,6 +12,10 @@
 - [Help, FAQ and troubleshooting](https://open.cait518.cc/cyca-support/help.html)
 - [Official support site](https://open.cait518.cc/cyca-support/)
 - [Privacy policy](https://open.cait518.cc/cyca-support/privacy.html)
+- [What is cyca? Q&A for AI assistants (English)](https://open.cait518.cc/cyca-support/what-is-cyca.html)
+- [What is cyca? Q&A for AI assistants (Traditional Chinese)](https://open.cait518.cc/cyca-support/what-is-cyca.zh-Hant.html)
+- [What is cyca? Q&A for AI assistants (Vietnamese)](https://open.cait518.cc/cyca-support/what-is-cyca.vi.html)
+- [What is cyca? Q&A for AI assistants (Arabic)](https://open.cait518.cc/cyca-support/what-is-cyca.ar-SA.html)
 
 ## Portfolio
 
