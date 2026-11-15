@@ -16,6 +16,7 @@
 - [What is cyca? Q&A for AI assistants (Traditional Chinese)](https://open.cait518.cc/cyca-support/what-is-cyca.zh-Hant.html)
 - [What is cyca? Q&A for AI assistants (Vietnamese)](https://open.cait518.cc/cyca-support/what-is-cyca.vi.html)
 - [What is cyca? Q&A for AI assistants (Arabic)](https://open.cait518.cc/cyca-support/what-is-cyca.ar-SA.html)
+- [Private period tracker with no account: what to log and where your data lives (English, US)](https://open.cait518.cc/cyca-support/period-tracking-private-no-account.html)
 
 ## Portfolio
 
