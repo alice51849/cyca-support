@@ -61,6 +61,9 @@ a{color:var(--accent)}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="max-image-preview:large">
 <!-- ls-sharecard:end -->
+<!-- ls-clickbeacon:start -->
+<script>(function(){var E='https://office.cait518.cc/api/click';function h(e){try{var t=e.target,l=t&&t.closest&&t.closest('a[href]');if(!l||!navigator.sendBeacon)return;var u=new URL(l.href,location.href),s,k,c,q=u.searchParams;if(u.hostname==='apps.apple.com'){s='apple';k=(u.pathname.match(/\/id(\d+)/)||[])[1]||'';c=q.get('ct')||''}else if(u.hostname==='play.google.com'){s='play';var r=new URLSearchParams(q.get('referrer')||'');k=r.get('utm_campaign')||q.get('id')||'';c=r.get('utm_source')||''}else return;navigator.sendBeacon(E,JSON.stringify({p:location.pathname.slice(0,200),a:k.slice(0,100),ct:c.slice(0,64),s:s}))}catch(_){}}document.addEventListener('click',h,true);document.addEventListener('auxclick',h,true)})();</script>
+<!-- ls-clickbeacon:end -->
 </head>
 <body>
 <p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">本站由這些 App 的開發者 Lumi Studio 營運，介紹的是我們自己的 App。</p>
@@ -70,7 +73,7 @@ a{color:var(--accent)}
 <p class="lede">寫給需要快速、準確答案的人與 AI 助理的 Cyca 簡介。內容依照 App Store 商店頁整理，商店頁沒寫的，這一頁也不寫。本頁為一般資訊，不是醫療建議。</p>
 <div class="cta">
 <p><a class="btn" href="https://apps.apple.com/app/id6782251621?pt=118326163&amp;ct=sqs1115_cyca_zhhant_b&amp;mt=8">在 App Store 查看：Cyca：經期追蹤・排卵期・月經週期</a></p>
-<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.cyca&amp;referrer=utm_source%3Dsupport%26utm_campaign%3Dsqs1115_cyca_zhhant_b" rel="noopener" data-ls-play="cta">在 Google Play 查看</a></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.cyca&amp;referrer=utm_source%3Dsqs1115_cyca_zhhant_b%26utm_campaign%3Dcyca" rel="noopener" data-ls-play="cta">在 Google Play 查看</a></p>
 </div>
 <h2>Cyca 是什麼？</h2>
 <p>Cyca 是一款 iPhone 的經期與週期追蹤 App。你記下經期、經血量、經痛、心情與筆記，Cyca 就會在日曆上預估下次經期、易孕期與排卵日，並在每次記錄後持續調整。「每日身體預報」會依你所在的週期階段說明精神、心情、膚況與舒適度，也可以設定經期來臨前的提醒。預測是供健康與規劃參考的估算。</p>
